@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Example</title>
+</head>
+<body>
+    <h1 id="heading">Hello, World!</h1>
+    <button onclick="changeText()">Click Me</button>
+	 <button onclick="showContent()">Show Content</button>
+	
+	
+<div style="display:none" id='content'>
+<H2>Here are some common methods to interact with the DOM:</h2>
+
+<p><u>Select Elements:</u>
+</p>
+<p>document.getElementById("id") – Selects an element by its id.
+</p>
+<p>document.querySelector("css-selector") – Selects the first matching element.
+</p>
+<p>document.querySelectorAll("css-selector") – Selects all matching elements.
+</p>
+<p><u>Modify Content:</u>
+</p>
+<p>element.textContent = "new text" – Changes the text inside an element.
+</p>
+<p>element.innerHTML = "new HTML" – Changes the HTML inside an element.
+</p>
+<p><u>Modify Styles:</u>
+</p>
+<p>element.style.property = "value" – Changes the style of an element (e.g., element.style.color = "red").
+</p>
+<p><u>Add/Remove Elements:</u>
+</p>
+<p>document.createElement("div") – Creates a new element.
+</p>
+<p>parentElement.appendChild(newElement) – Adds a new element to the page.
+</p>
+<p>element.remove() – Removes an element from the page.</p>
+	</div>	
+	
+</body>
+<script>
+
+function changeText() {
+    // Access the <h1> element using its ID
+    const heading = document.getElementById("heading");
+
+    // Change the text content of the <h1> element
+    heading.textContent = "You clicked the button!";
+}
+function showContent() {
+    // Access the <h1> element using its ID
+    const content = document.getElementById("content");
+	if(content.style.display === "block")
+	 content.style.display = "none";
+	 else
+	  content.style.display = "block";
+
+    
+   
+}
+
+</script>
+</html>
+
